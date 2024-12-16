@@ -13,3 +13,13 @@
 .externalNativeBuild
 .cxx
 local.properties
+# Ignore Rust target directory
+rust_lib/target/
+
+# Ignore IDE-specific files
+.idea/
+
+# Ignore build artifacts
+*.rlib
+*.rmeta
+*.dylib
