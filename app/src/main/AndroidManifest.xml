@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.main.pdsprototype">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- Permissions -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
 
+        <!-- Main Entry Point -->
         <activity android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -23,7 +24,9 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".PDSPrototype"
+        <!-- Core Service -->
+        <service
+            android:name=".PDSService"
             android:exported="false"
             android:foregroundServiceType="location" />
 

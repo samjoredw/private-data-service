@@ -1,16 +1,17 @@
 package com.main.pdsprototype;
 
-import android.content.Intent;
+import android.app.Activity;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+/**
+ * MainActivity serves as the entry point to the app.
+ * For now, it does not start any services or perform actions.
+ */
+public class MainActivity extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        // Start the PDSPrototype service
-        startService(new Intent(this, PDSPrototype.class));
-        // Close the activity after starting the service
-        finish();
+        setContentView(R.layout.activity_main);
     }
 }

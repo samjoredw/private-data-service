@@ -1,0 +1,58 @@
+=== Demo 1: Process Location Request ===
+
+Processing a location request from CityOS. This calculates privacy loss based on location precision.
+Parameters:
+- Request Type: location_request
+- Location Precision: 5.0
+----------------------------------------
+Privacy Total Before Request: 0.0
+Privacy Total After Request: 0.5
+----------------------------------------
+
+=== Demo 2: Process General Request ===
+
+Processing a general status request. This has lower privacy impact than location requests.
+Parameters:
+- Request Type: status_request
+- Status Precision: 3.0
+----------------------------------------
+Privacy Total Before Request: 0.5
+Privacy Total After Request: 0.8
+----------------------------------------
+
+=== Demo 3: Process Broadcast ===
+
+Receiving a broadcast from a privacy beacon with predefined privacy loss.
+Parameters:
+- Broadcast Type: privacy_beacon
+- Privacy Loss: 0.4
+----------------------------------------
+Privacy Total Before Broadcast: 0.8
+Privacy Total After Broadcast: 1.2
+----------------------------------------
+
+=== Demo 4: Retrieve Privacy Logs ===
+
+Displaying all recorded privacy-impacting events.
+This includes all requests and broadcasts with their associated privacy losses.
+Events shown include both demo operations and background system activities.
+----------------------------------------
+Retrieved Privacy Logs:
+Source: Request, Timestamp: 2024-12-16 12:19:25, Privacy Loss: 0.5
+Source: Request, Timestamp: 2024-12-16 12:19:25, Privacy Loss: 0.3
+Source: Broadcast, Timestamp: 2024-12-16 12:19:25, Privacy Loss: 0.4
+Source: Request, Timestamp: 2024-12-16 12:19:25, Privacy Loss: 0.5
+Source: Request, Timestamp: 2024-12-16 12:19:25, Privacy Loss: 0.5
+Source: Request, Timestamp: 2024-12-16 12:19:25, Privacy Loss: 0.3
+Source: Broadcast, Timestamp: 2024-12-16 12:19:25, Privacy Loss: 0.3
+Source: Broadcast, Timestamp: 2024-12-16 12:19:25, Privacy Loss: 0.2
+
+----------------------------------------
+
+=== Demo 5: Retrieve Total Privacy Loss ===
+
+Calculating total privacy impact across all operations.
+This represents the cumulative privacy loss from all logged events.
+----------------------------------------
+Current Total Privacy Loss: 3.0
+----------------------------------------
